@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testportal_suitmedia/utils/constants.dart';
 
-PreferredSizeWidget appBarWidgetSecondScreen(BuildContext context) {
+PreferredSizeWidget appBarWidgetThirdScreen(BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
     centerTitle: true,
@@ -13,7 +13,7 @@ PreferredSizeWidget appBarWidgetSecondScreen(BuildContext context) {
         },
         icon: Icon(Icons.arrow_back_ios_rounded)),
     title: Text(
-      'Second Screen',
+      'Third Screen',
       style: TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.bold,
