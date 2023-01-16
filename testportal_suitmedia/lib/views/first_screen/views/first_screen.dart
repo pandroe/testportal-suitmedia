@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:testportal_suitmedia/views/first_screen/widgets/check_button.dart';
 import 'package:testportal_suitmedia/views/first_screen/widgets/next_button%20copy.dart';
+import 'package:testportal_suitmedia/views/second_screen/views/second_screen.dart';
 
 import '../../../utils/constants.dart';
 
 class FirstScreen extends StatefulWidget {
+  static const String routeName = 'first-screen';
   const FirstScreen({super.key});
 
   @override
@@ -47,11 +49,14 @@ class _FirstScreenState extends State<FirstScreen> {
                     ),
                     Form(
                       child: TextFormField(
-                        style: TextStyle(color: Color(Constants.textStyleField)),
+                        style:
+                            TextStyle(color: Color(Constants.textStyleField)),
                         decoration: InputDecoration(
                             fillColor: Colors.white,
                             hintText: "Name",
-                            hintStyle: TextStyle(color: Color(Constants.textStyleField),fontSize: Constants.fontSemiRegular),
+                            hintStyle: TextStyle(
+                                color: Color(Constants.textStyleField),
+                                fontSize: Constants.fontSemiRegular),
                             filled: true,
                             contentPadding: EdgeInsets.all(12.0),
                             border: OutlineInputBorder(
@@ -62,13 +67,16 @@ class _FirstScreenState extends State<FirstScreen> {
                     SizedBox(
                       height: size.height * 0.025,
                     ),
-                     Form(
+                    Form(
                       child: TextFormField(
-                        style: TextStyle(color: Color(Constants.textStyleField)),
+                        style:
+                            TextStyle(color: Color(Constants.textStyleField)),
                         decoration: InputDecoration(
                             fillColor: Colors.white,
                             hintText: "Palindrome",
-                            hintStyle: TextStyle(color: Color(Constants.textStyleField),fontSize: Constants.fontSemiRegular),
+                            hintStyle: TextStyle(
+                                color: Color(Constants.textStyleField),
+                                fontSize: Constants.fontSemiRegular),
                             filled: true,
                             contentPadding: EdgeInsets.all(12.0),
                             border: OutlineInputBorder(
@@ -77,18 +85,21 @@ class _FirstScreenState extends State<FirstScreen> {
                                     BorderRadius.all(Radius.circular(12.0)))),
                       ),
                     ),
-                     SizedBox(
+                    SizedBox(
                       height: size.height * 0.065,
                     ),
-                    CheckButton(onPressed: () {
-                      
-                    }),
-                     SizedBox(
+                    CheckButton(onPressed: () {}),
+                    SizedBox(
                       height: size.height * 0.025,
                     ),
-                    NextButton(onPressed: () {
-                      
-                    },),
+                    NextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,
+                          SecondScreen.routeName,
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),

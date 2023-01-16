@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:testportal_suitmedia/views/first_screen/views/first_screen.dart';
 
+import 'views/second_screen/views/second_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -18,6 +20,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const FirstScreen(),
+      routes: {
+        FirstScreen.routeName:(context) => FirstScreen(),
+        SecondScreen.routeName:(context) => SecondScreen(),
+      },
     );
   }
 }
