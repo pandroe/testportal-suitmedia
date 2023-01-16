@@ -20,4 +20,5 @@ class Constants{
   static const int backgroundGradientColors02 = 0xFF44648F;
   static const int textStyleField = 0xFF6867775C;
   static const int button = 0xFF2B637B;
+  static const int backNavigationArrow = 0xFF554AF0;
 }
